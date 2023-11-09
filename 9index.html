@@ -1,0 +1,19 @@
+<html>
+  <body>
+    <div id="app"></div>
+HTML内に空の<div>要素を追加しています。この要素は、Reactがレンダリングしたコンテンツを表示するためのコンテナとして使用されます。
+この要素はid属性がappとなっており、JavaScriptのコードでこの要素を取得してReactコンポーネントを表示します。
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+      ReactDOM.render(<h1>Develop. Preview. Ship. 🚀</h1>, app);
+    </script>
+埋め込まれたJavaScriptコードのブロックを開始します。
+type属性がtext/jsxとなっているため、このブロック内でJSX構文を使用できます。
+  </body>
+</html>
+JSX基礎
+scriptタグでreactとreact-domとbabelをインポートしてReactDOMとJSXが使えるようにして、
+ReactDOM.render()に書いた内容をid="app"であるタグに追加している
