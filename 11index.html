@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <div id="app"></div>
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<!--React DOMライブラリをロードしています。React DOMはReactアプリケーションをブラウザに表示するためのツールです。-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+//埋め込まれたJavaScriptコードのブロックを開始します。type属性がtext/jsxとなっているため、このブロック内でJSX構文を使用できます。
+      const app = document.getElementById('app');
+      
+      function Header() {
+        return <h1>Develop. Preview. Ship. 🚀</h1>;
+      }
+//この部分はReactコンポーネントの定義です。Headerという関数型コンポーネントが定義されています。このコンポーネントはシンプルなもので、<h1>要素を返します。!
+      function HomePage() {
+        return (
+          <div>
+            {/* Nesting the Header component */}
+            <Header />
+          </div>
+        );
+      }
+      
+      ReactDOM.render(<HomePage />, app);
+    </script>
+//React DOMのrenderメソッドを使用してHomePageコンポーネントを実際のDOMにレンダリングしています。
+<HomePage /> はJSX構文で書かれたReact要素で、この要素はappという要素にレンダリングされます。
+結果として、HomePageコンポーネント内でHeaderコンポーネントも含めたコンポーネントツリーが表示されます。
+  </body>
+</html>
