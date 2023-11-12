@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <div id="app"></div>
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+    const app = document.getElementById('app');
+<!--babel.min.jsはBabelコンパイラを提供し、JSX（JavaScript XML）を通常のJavaScriptに変換するために使用されます。-->
+    function Header(props) {
+        return <h1>{props.title}</h1>
+    }
+<!--JSXはReactでコンポーネントの構築や描画をより簡潔に行うための構文です。この例では、props.titleの値を含むh1要素が生成されています。-->
+    function HomePage() {
+        return (
+            <div>
+                <Header title="React 💙" />
+            </div>
+        );
+    }
+        
+    ReactDOM.render(<HomePage />, app)
+<!--Headerという関数コンポーネントは、propsとして渡されたtitleプロパティを含むh1要素を返します。-->
+    </script>
+  </body>
+</html>
