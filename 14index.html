@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div id="app"></div>
+    
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+        
+        const app = document.getElementById('app');
+
+        function Header({ title }) {
+            return <h1>{title}</h1>;
+        }
+            
+        function HomePage() {
+            function handleClick() {
+                console.log('increment like count');
+            }
+//HomePageは、handleClickという関数を定義し、その関数をボタンのonClickイベントに関連付けています。
+ボタンがクリックされると、コンソールに 'increment like count' がログされます。 
+            return (
+                <div>
+                    <button onClick={handleClick}>Like</button>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<HomePage />, app)
+
+    </script>
+  </body>
+</html>
+<!--・<button onClick={handleClick}>Like</button>の部分で、onClick属性を使用してボタンのクリックイベントに handleClick 関数を関連付けています。
+    handleClick関数は、ボタンがクリックされたときに実行され、コンソールにメッセージをログします。
+    ・Reactでは、イベントハンドリングは通常、camelCaseの形式で記述されます。-->
